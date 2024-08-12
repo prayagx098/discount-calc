@@ -1,6 +1,5 @@
 
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
+import { Button, Form } from 'react-bootstrap';
 import './App.css'
 import { useState } from 'react';
 
@@ -42,8 +41,8 @@ function App() {
           <div className="valueIntake">
             <div className="valueForm">
               <form action="">
-                <TextField id="outlined-basic" label="Amount" variant="outlined" value={amount||""} onChange={(e)=>setAmount(e.target.value)}/> <br /> <br />
-                <TextField id="filled-basic" label="Discount in %" variant="filled" value={rate||""} onChange={(e)=>setRate(e.target.value)}/>
+                <Form.Control placeholder="Amount" variant="outlined" value={amount||""} onChange={(e)=>setAmount(e.target.value)}/> <br /> <br />
+                <Form.Control placeholder="Discount in %" variant="filled" value={rate||""} onChange={(e)=>setRate(e.target.value)}/>
               </form>
               <div className="button">
                 <Button onClick={(e)=>calculate(e)}>Calculate</Button>
